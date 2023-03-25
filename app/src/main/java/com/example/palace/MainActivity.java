@@ -24,6 +24,7 @@ import java.security.MessageDigest;
 
 public class MainActivity extends AppCompatActivity {
     private ISessionCallback mSessionCallback;
+    // 하이
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
