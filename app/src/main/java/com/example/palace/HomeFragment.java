@@ -64,7 +64,18 @@ public class HomeFragment extends Fragment {
         View rootView = (ViewGroup) inflater.inflate(R.layout.fragment_home, container, false);
 
         ImageView homebg = (ImageView) rootView.findViewById(R.id.home_bg);
+        ImageView filter = (ImageView) rootView.findViewById(R.id.btn_filter);
 
+        //필터 선택했을 시
+        filter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), HomeFilter1.class);
+                startActivity(intent);
+            }
+        });
+
+        // 메뉴 선택했을 시
         homebg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
