@@ -2,6 +2,8 @@ package com.example.palace;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.content.pm.PackageInfo;
@@ -14,6 +16,7 @@ import android.widget.Toast;
 
 import com.kakao.auth.ISessionCallback;
 import com.kakao.auth.Session;
+import com.kakao.auth.authorization.accesstoken.AccessToken;
 import com.kakao.network.ErrorResult;
 import com.kakao.usermgmt.UserManagement;
 import com.kakao.usermgmt.callback.MeV2ResponseCallback;
@@ -51,10 +54,17 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onSuccess(MeV2Response result) {
                         // 로그인 성공
-                        Intent intent = new Intent(LoginActivity.this, LoginSuccess.class);
+                        AccessToken accessToken;
+                        accessToken = Session.getCurrentSession().getTokenInfo();
+                        String kakaoAccessToken = accessToken.getAccessToken();
+
+                        Log.e("Login Access Token : ",kakaoAccessToken);
+
+                        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                         intent.putExtra("name", result.getKakaoAccount().getProfile().getNickname());
                         intent.putExtra("profileImg", result.getKakaoAccount().getProfile().getProfileImageUrl());
-                        intent.putExtra("birth", result.getKakaoAccount().getBirthday());
+                        intent.putExtra("accessToken", kakaoAccessToken);
+
                         startActivity(intent);
 
                         Toast.makeText(LoginActivity.this, "로그인이 완료되었습니다.", Toast.LENGTH_SHORT).show();

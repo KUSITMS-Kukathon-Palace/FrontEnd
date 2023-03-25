@@ -36,7 +36,7 @@ public class CustomApplication extends Application {
 
                 @Override
                 public boolean isSecureMode() {
-                    return false;
+                    return true;
                     // 로그인시 access token과 refresh token을 저장할 때의 암호화 여부를 결정한다.
                 }
 

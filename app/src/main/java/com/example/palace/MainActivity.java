@@ -4,6 +4,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -29,7 +31,7 @@ import com.kakao.util.exception.KakaoException;
 import java.security.MessageDigest;
 
 public class MainActivity extends AppCompatActivity {
-
+    public static String strName, strProfile, accessToken;
     ListFragment listFragment;
     HomeFragment homeFragment;
     MyFragment myFragment;
@@ -43,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
 //        fragmentTransaction.replace(R.id.container, fragment).commit();      // Fragment로 사용할 MainActivity내의 layout공간을 선택합니다.
     }
 
+    @SuppressLint("ResourceType")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,6 +72,17 @@ public class MainActivity extends AppCompatActivity {
                         Log.d("LOG", "홈화면");
                         return true;
                     case R.id.setButton:
+                        // 로그인 정보 받기
+                        Intent intent = getIntent();
+                        strName = intent.getStringExtra("name");
+                        strProfile = intent.getStringExtra("profileImg");
+                        accessToken = intent.getStringExtra("accessToken");
+
+                        Bundle bundle = new Bundle();
+                        bundle.putString("name", strName);
+                        bundle.putString("profile", strProfile);
+                        myFragment.setArguments(bundle);
+                        // MyFragment로 본인 정보 전달
                         getSupportFragmentManager().beginTransaction().replace(R.id.container, myFragment).commit();
                         Log.d("LOG", "마이페이지화면");
                         return true;
