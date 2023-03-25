@@ -3,6 +3,7 @@ package com.example.palace;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -36,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
     HomeFragment homeFragment;
     MyFragment myFragment;
 
+    public Toolbar toolbar;
+
     public void replaceFragment(Fragment fragment) {
 //        FragmentManager fragmentManager = getSupportFragmentManager();
 //        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -50,6 +53,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        toolbar = findViewById(R.id.toolbar);
 
         listFragment = new ListFragment();
         homeFragment = new HomeFragment();
