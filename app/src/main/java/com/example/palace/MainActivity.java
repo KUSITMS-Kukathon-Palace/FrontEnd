@@ -31,6 +31,10 @@ import com.kakao.util.exception.KakaoException;
 
 import java.security.MessageDigest;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 public class MainActivity extends AppCompatActivity {
     public static String strName, strProfile, accessToken;
     ListFragment listFragment;

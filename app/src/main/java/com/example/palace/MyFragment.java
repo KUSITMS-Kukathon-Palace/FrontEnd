@@ -71,6 +71,7 @@ public class MyFragment extends Fragment {
 
         ImageView myprofile = v.findViewById(R.id.iv_profile);
         TextView name = v.findViewById(R.id.tv_name);
+
         Button btn_logout = v.findViewById(R.id.btn_logout);
 
         // 전달받은 데이터 확인하기

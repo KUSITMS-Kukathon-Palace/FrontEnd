@@ -5,6 +5,17 @@
     android:layout_height="match_parent"
     tools:context=".MyFragment">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="마이페이지"
+        android:layout_marginLeft="125dp"
+        android:layout_marginTop="100dp"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        android:textStyle="bold">
+    </TextView>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -14,8 +25,8 @@
             android:id="@+id/iv_profile"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:layout_marginLeft="120dp"
-            android:layout_marginTop="120dp">
+            android:layout_marginTop="160dp"
+            android:layout_gravity="center">
         </ImageView>
 
         <TextView
@@ -24,15 +35,66 @@
             android:layout_height="wrap_content"
             android:text="이름"
             android:textSize="20dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
             android:layout_marginTop="20dp"
             android:layout_gravity="center">
         </TextView>
+        
+        <Button
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="우리 단체 소개글 확인/수정하기"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_gravity="center">
+        </Button>
+
+        <Button
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:text="찜한 공간 목록"
+            android:layout_gravity="center">
+        </Button>
+
+        <Button
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:text="알림"
+            android:layout_gravity="center">
+        </Button>
 
         <Button
             android:id="@+id/btn_logout"
-            android:layout_width="match_parent"
+            android:layout_width="350dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="300dp">
+            android:layout_marginTop="10dp"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:text="로그아웃"
+            android:layout_gravity="center">
+        </Button>
+
+        <Button
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:text="탈퇴하기"
+            android:layout_gravity="center">
         </Button>
     </LinearLayout>
     <!-- TODO: Update blank fragment layout -->
