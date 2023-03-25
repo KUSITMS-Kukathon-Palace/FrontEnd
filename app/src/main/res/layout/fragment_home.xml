@@ -11,4 +11,18 @@
         android:layout_height="match_parent"
         android:text="홈화면" />
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/rec1"
+        android:layout_gravity="center"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/rec3"
+        android:layout_gravity="bottom|center"/>
+
 </FrameLayout>
