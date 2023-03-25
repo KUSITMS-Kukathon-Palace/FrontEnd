@@ -7,12 +7,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-public class applyActivity extends AppCompatActivity {
+public class finishActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_apply);
+        setContentView(R.layout.activity_finish);
 
         ImageView detail_bg = (ImageView) findViewById(R.id.detailbg);
 
@@ -20,12 +20,10 @@ public class applyActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(applyActivity.this, finishActivity.class);
+                Intent intent = new Intent(finishActivity.this, MainActivity.class);
                 startActivity(intent);
                 finish();
             }
         });
     }
-
-
 }

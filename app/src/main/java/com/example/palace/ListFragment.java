@@ -90,15 +90,15 @@ public class ListFragment extends Fragment {
         mRecyclerView2.setAdapter(mRecyclerAdapter2);
 
         mListItem = new ArrayList<>();
-        mListItem.add(new ListItem("2023년 3월 30일 12:00 - 19:00", R.drawable.list_place_1, "한양대 - 학생회관 체육실", "서울특별시 성동구 왕십리로 222", "큐시즘 27기", "예약인원 72명", R.drawable.list_wait_btn));
-        mListItem.add(new ListItem("2023년 3월 30일 12:00 - 19:00", R.drawable.list_place_1, "한양대 - 학생회관 체육실", "서울특별시 성동구 왕십리로 222", "큐시즘 27기", "예약인원 72명", R.drawable.list_suc_btn));
-        mListItem.add(new ListItem("2023년 3월 30일 12:00 - 19:00", R.drawable.list_place_1, "한양대 - 학생회관 체육실", "서울특별시 성동구 왕십리로 222", "큐시즘 27기", "예약인원 72명", R.drawable.list_x_btn));
+        mListItem.add(new ListItem("2023년 3월 30일 12:00 - 19:00", R.drawable.list_place_1, "한양대학교 - 경영관 SK홀", "서울특별시 성동구 왕십리로 222", "큐시즘 27기", "예약인원 72명", R.drawable.list_wait_btn));
+        mListItem.add(new ListItem("2023년 4월 11일 12~19시", R.drawable.list_place_2, "숭실대 - 프로젝트룸 Passion", "서울특별시 성동구 왕십리로 222", "큐시즘 27기", "예약인원 72명", R.drawable.list_suc_btn));
+        mListItem.add(new ListItem("2023년 4월 13일 12:00 - 19:00", R.drawable.list_place_3, "한양대 - 학생회관 체육실", "서울특별시 성동구 왕십리로 222", "큐시즘 27기", "예약인원 72명", R.drawable.list_x_btn));
         mRecyclerAdapter.setDonationList(getContext(), mListItem);
 
         mListItem2 = new ArrayList<>();
-        mListItem2.add(new ListItem2("2023년 3월 30일 12:00 - 19:00", R.drawable.list_place_1, "한양대 - 학생회관 체육실", "서울특별시 성동구 왕십리로 222", "큐시즘 27기", "예약인원 72명", R.drawable.list_fin_btn));
-        mListItem2.add(new ListItem2("2023년 3월 30일 12:00 - 19:00", R.drawable.list_place_1, "한양대 - 학생회관 체육실", "서울특별시 성동구 왕십리로 222", "큐시즘 27기", "예약인원 72명", R.drawable.list_fin_btn));
-        mListItem2.add(new ListItem2("2023년 3월 30일 12:00 - 19:00", R.drawable.list_place_1, "한양대 - 학생회관 체육실", "서울특별시 성동구 왕십리로 222", "큐시즘 27기", "예약인원 72명", R.drawable.list_fin_btn));
+        mListItem2.add(new ListItem2("2023년 1월 15일 12:00 - 19:00", R.drawable.list_place_4, "한양대학교 - 경영관 SK홀", "서울특별시 성동구 왕십리로 222", "큐시즘 27기", "예약인원 72명", R.drawable.list_fin_btn));
+        mListItem2.add(new ListItem2("2023년 1월 11일 12:00 - 19:00", R.drawable.list_place_5, "홍익대 - 학생회관 체육실", "서울특별시 성동구 왕십리로 222", "큐시즘 27기", "예약인원 72명", R.drawable.list_fin_btn));
+        mListItem2.add(new ListItem2("2023년 1월 10일 12:00 - 19:00", R.drawable.list_place_6, "한양대 - 학생회관 체육실", "서울특별시 성동구 왕십리로 222", "큐시즘 27기", "예약인원 72명", R.drawable.list_fin_btn));
         mRecyclerAdapter2.setDonationList(getContext(), mListItem2);
 
 
